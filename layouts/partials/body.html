@@ -1,0 +1,58 @@
+<main role="main">
+  <div class="header">
+    <img src="img/me.png" alt="A photo of me" class="image" />
+    <div class="short-description">
+      <h1>Hi! My name is Patrick.</h1>
+      <p>I'm a frontend developer based in Austria.</p>
+      <p>
+        Wanna know more about my projects and hobbies?<br />You can read about
+        them here
+      </p>
+    </div>
+    <div class="icons-container">
+      <div class="contact-icon">
+        <a href="mailto:pat.rudigier@gmail.com" title="E-mail"
+          ><i class="fas fa-envelope-open fa-2x"></i
+        ></a>
+      </div>
+      <div class="contact-icon">
+        <a href="https://github.com/novarider" title="Github"
+          ><i class="fab fa-github fa-2x"></i
+        ></a>
+      </div>
+      <div class="contact-icon">
+        <a href="https://twitter.com/PatrickRudigier" title="Twitter"
+          ><i class="fab fa-twitter fa-2x"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="row">
+      {{ with .Site.GetPage "/posts/_index.md" }}
+      <h2 class="underline"><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
+      <p>{{ .Content }}</p>
+      <ul>
+        {{ range first 5 .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    <div class="row">
+      {{ with .Site.GetPage "/projects/_index.md" }}
+      <h2 class="underline"><a href="{{ .RelPermalink }}">{{.Title}}</a></h2>
+      <p>{{ .Content }}</p>
+      <ul>
+        {{ range first 5 .Pages }}
+        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
+    </div>
+    <div class="row">
+      <h2 class="underline">{{ .Title }}</h2>
+      {{ .Content }}
+    </div>
+  </div>
+</main>

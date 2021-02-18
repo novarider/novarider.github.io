@@ -1,0 +1,5 @@
+{{ with resources.GetMatch "styles/style.css" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }} {{ with resources.GetMatch "styles/all.min.css" }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" />
+{{ end }}
