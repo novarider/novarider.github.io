@@ -12,6 +12,11 @@ li {
   list-style-type: none;
 }
 
+li > i,
+.footer i {
+  margin-right: 5px;
+}
+
 a {
   color: black;
   font-weight: 600;
