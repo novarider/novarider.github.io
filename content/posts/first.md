@@ -1,7 +1,7 @@
 ---
 title: "First Hugo Homepage"
 date: 2021-02-17T11:51:19+01:00
-draft: true
+draft: false
 ---
 
 My first real project with Hugo I is this website.
