@@ -34,7 +34,12 @@
       <p>{{ .Content }}</p>
       <ul>
         {{ range first 5 .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <li>
+          <i class="fa fa-angle-right"></i>
+          <a href="{{ .RelPermalink }}">
+            {{ .Title }} - {{ dateFormat "2 January 2006" .PublishDate }}
+          </a>
+        </li>
         {{ end }}
       </ul>
       {{ end }}
@@ -45,7 +50,10 @@
       <p>{{ .Content }}</p>
       <ul>
         {{ range first 5 .Pages }}
-        <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        <li>
+          <i class="fa fa-angle-right"></i>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
         {{ end }}
       </ul>
       {{ end }}
