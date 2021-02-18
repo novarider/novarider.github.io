@@ -4,6 +4,14 @@ body {
   color: black;
 }
 
+ul {
+  padding-left: 15px;
+}
+
+li {
+  list-style-type: none;
+}
+
 a {
   color: black;
   font-weight: 600;
