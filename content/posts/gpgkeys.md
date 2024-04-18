@@ -4,8 +4,6 @@ date: 2024-04-15T20:36:33+01:00
 draft: false
 ---
 
-# Rediscovered my GPG Key"
-
 After some task at work I remembered that I once created a GPG Key during a information security class.
 So I started to search for it and found it on my old windows machine with this command
 
